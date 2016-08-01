@@ -1,5 +1,5 @@
 import React from 'react'
-import { StyleSheet, Text, View, TouchableHighlight, ScrollView } from 'react-native-web'
+import { StyleSheet, Text, View, TouchableHighlight, ScrollView } from 'react-native'
 
 // Styles
 const styles = StyleSheet.create({
@@ -25,20 +25,21 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   column: {
-    justifyContent: 'space-around',
+    // justifyContent: 'space-around',
     flexDirection: 'column',
     flex: 1,
     alignItems: 'center'
   },
     box: {
     alignItems: 'center',
-    flex: 1,
-    justifyContent: 'center',
-    borderWidth: 1
+    // flex: 1,
+    // justifyContent: 'center',
+    borderWidth: 1,
+    height: 20
   },
   scrollViewContainer: {
     height: 400,
-    width: 300
+    flex: 1
   },
   scrollViewStyle: {
     borderWidth: 1
@@ -68,7 +69,7 @@ const App = () => (
               scrollEventThrottle={1} // 1 event per second
               style={styles.scrollViewStyle}
             >
-              {Array.from({ length: 50 }).map((item, i) => (
+              {Array.from({ length: 150 }).map((item, i) => (
                 <View key={i} style={styles.box}>
                   <Text>{i}</Text>
                 </View>
